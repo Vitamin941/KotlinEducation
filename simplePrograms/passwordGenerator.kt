@@ -10,24 +10,29 @@ const val ACCEPTED_SYMBOLS = LETTERS_UPPER + SYMBOLS + NUMS + LETTERS_LOWER
 fun main(args: Array<String>) {
     var passwordLength:Int;
     if (args.isEmpty())
-        with(Scanner(System.`in`)) {
-            passwordLength = nextInt();
-        }
-    else {
-        try {
-            passwordLength = args[0].toInt();
-        }
-        catch (ex: NumberFormatException) {
-            println("Argument isn't correct. Password length is defined as 20")
-            passwordLength = 20
-        }
-    }
+        passwordLength = readLine()
+            ?.first()!!.
+            digitToInt()
+    else
+        passwordLength = parseArg(args[0])
     println(createPassword(passwordLength))
+}
+
+fun parseArg(arg: String): Int {
+    var result:Int
+    try {
+        result = arg.toInt();
+    }
+    catch (ex: NumberFormatException) {
+        println("Argument isn't correct. Password length is defined as 20")
+        result = 20
+    }
+    return result
 }
 
 fun createPassword (length: Int): String {
     var result:String = "";
     for (i in 0..length)
-        result += ACCEPTED_SYMBOLS[(0..length).random()];
+        result += ACCEPTED_SYMBOLS[(0..length).random()]
     return result;
 }
