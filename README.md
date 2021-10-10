@@ -21,3 +21,8 @@ basic programms like PasswordGenerator, GuessTheNumberGame etc..
 ### Android - HeadFirst
 And is this repo I'll commit a project from book [HeadFirst](https://habr.com/ru/company/piter/blog/277023/) coded in Kotlin.
 You can find project from this book in "HeadFirst - Android" folder.
+
+
+~~~
+BeerAdviser - super simple program from chapter two of HeadFirst book. It shows a basics of Android development.
+You'll know what is a Button, Spinner and TextView.
