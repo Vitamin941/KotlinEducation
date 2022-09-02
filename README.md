@@ -12,7 +12,7 @@ but type inference allows its syntax to be more concise. Kotlin mainly targets t
 
 ---
 
-### Koltin Sintax
+### Koltin Syntax
 In this repo I'll commit a tasks from [LeetCode.com](https://leetcode.com/), some 
 basic programms like PasswordGenerator, GuessTheNumberGame etc..
 
